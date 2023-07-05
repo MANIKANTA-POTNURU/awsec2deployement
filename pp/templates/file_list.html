@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for file in files %}
+  <p>
+    <a href="{% url 'file_detail' file.id %}">{{ file.file.name }}</a>
+  </p>
+{% empty %}
+  <p>No files uploaded yet.</p>
+{% endfor %}
+
+</body>
+</html>

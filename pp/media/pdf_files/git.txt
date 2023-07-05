@@ -1,0 +1,9 @@
+-->git init
+-->git status
+-->git add filename(working directory to the staging Area)
+-->git commit(staging area to local repository
+-->git commit -m "msg"(for showing message
+-->checkout is using for shifting from one branch to another branch
+-->git checkout -b "copy1"
+--->git clone url
+-->

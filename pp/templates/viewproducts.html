@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/indexstyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'userchangepwd' %}">Change Password</a></li>
+            <li><a href="{% url 'viewusers' %}">view Users</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'addproduct' %}">Add Products</a></li>
+            <li><a href="{% url 'viewproducts' %}">view Products</a></li>
+            <li><a href="{% url 'viewprofile' %}">View Profile</a></li>
+
+        </ul>
+    Welcome {{uname}}
+    </nav>
+
+    <section>
+      View Products
+    </section>
+
+    <section>
+Total Products = {{count}}  <br><br>
+ <div class="clearfix">
+  {% for product in productlist %}
+    <div class="card image">
+      <img src="{{product.image.url}}" class="menu-item-image">
+      <h2>Category:{{product.category}}</h2>
+      <p>Name:{{product.name}}</p>
+      <p>About: {{product.description}}</p>
+      <p class="price">Price: {{product.price}}</p>
+        <div class="butmani">
+        <button><a href="/deleteproduct/{{product.id}}">Delete</a></button>
+        <a href="{% url 'viewproduct' product.id %}"><h3>View Product</h3></a>
+        </div>
+        <br>
+    </div>
+  {% endfor %}
+</div>
+    </section>
+<section>
+
+</section>
+    <footer>
+       DESIGNED BY MANI
+    </footer>
+</body>
+</html>

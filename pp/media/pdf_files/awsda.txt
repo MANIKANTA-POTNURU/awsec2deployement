@@ -1,0 +1,11 @@
+Waterfall:design-code-test-deploy
+Agile:code-test-code-test------deploy
+Devops:code-test-deploy........(it contains multiple phases).We can add anything in the middle
+-->devops=development+operations
+-----------Devops Architecture Features-------
+1)Automation
+3)Integration
+4)Configuration management
+Jenkin:
+is a continuous integration tool ontinuous enables testing ,build and deploy.
+

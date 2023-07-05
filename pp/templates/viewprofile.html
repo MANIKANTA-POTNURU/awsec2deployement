@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/indexstyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'userchangepwd' %}">Change Password</a></li>
+            <li><a href="{% url 'viewusers' %}">view Users</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+              <li><a href="{% url 'viewprofile' %}">View Profile</a></li>
+
+
+        </ul>
+    Welcome {{uname}}
+    </nav>
+    <section>
+        <div class="card">
+    <p><b>{{user.sign_name}}</b></p>
+    <p>{{user.sign_email}}</p>
+</div>
+    </section>
+
+
+
+    <footer>
+       DESIGNED BY MANI
+    </footer>
+</body>
+</html>

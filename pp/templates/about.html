@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aboutstyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}">LogIn</a></li>
+            <li><a href="{% url 'registration' %}">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend semper enim, vel aliquet ex. Donec ut elementum ligula.</p>
+
+        <h3>My Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Designed by mani</p>
+    </footer>
+</body>
+</html>
